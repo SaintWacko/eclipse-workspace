@@ -7,8 +7,6 @@ class StepsCarouselView extends Ui.DataField {
     hidden var timerRunning = 0;
     hidden var stepsNonActive = 0;
     hidden var stepsRecorded = 0;
-    hidden var ticker = 0;
-    hidden var label = "Total";
 
     function initialize() {
         DataField.initialize();
@@ -90,7 +88,7 @@ class StepsCarouselView extends Ui.DataField {
 		} else if (timerSlot <= 14) {
 			label = "Steps To Go";
 			mValue = (activityMonitorInfo.stepGoal - activityMonitorInfo.steps);
-			if (mValue < 0) {
+			if (mValue < 0 {
 				mValue = 0;
 			}
 		} else if (timerSlot <= 19) {
@@ -116,7 +114,7 @@ class StepsCarouselView extends Ui.DataField {
         }
         value.setText(mValue.format("%.2f"));
         
-        View.findDrawableById("label").setText(label);
+        View.findDrawableByID("label").setText(label);
 
         // Call parent's onUpdate(dc) to redraw the layout
         View.onUpdate(dc);

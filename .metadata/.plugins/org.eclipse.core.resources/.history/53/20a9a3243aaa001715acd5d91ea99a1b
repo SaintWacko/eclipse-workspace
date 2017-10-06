@@ -8,7 +8,6 @@ class StepsCarouselView extends Ui.DataField {
     hidden var stepsNonActive = 0;
     hidden var stepsRecorded = 0;
     hidden var ticker = 0;
-    hidden var label = "Total";
 
     function initialize() {
         DataField.initialize();
@@ -116,7 +115,7 @@ class StepsCarouselView extends Ui.DataField {
         }
         value.setText(mValue.format("%.2f"));
         
-        View.findDrawableById("label").setText(label);
+        View.findDrawableByID("label").setText(label);
 
         // Call parent's onUpdate(dc) to redraw the layout
         View.onUpdate(dc);
